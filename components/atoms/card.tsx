@@ -1,0 +1,16 @@
+import { cn } from "@/lib/utils";
+
+type CardProps = React.HTMLAttributes<HTMLDivElement>;
+
+export function Card({ className, ...props }: CardProps) {
+  return (
+    <article
+      className={cn(
+        "rounded-xl border border-border bg-card p-6 shadow-sm transition hover:shadow-md",
+        className,
+      )}
+      {...props}
+    />
+  );
+}
+

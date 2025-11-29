@@ -1,0 +1,16 @@
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 25% 10%;
+  --card: 0 0% 100%;
+  --border: 220 14% 90%;
+  --muted-foreground: 220 10% 45%;
+}
+
+.dark {
+  --background: 220 20% 6%;
+  --foreground: 0 0% 100%;
+  --card: 220 20% 10%;
+  --border: 220 10% 25%;
+  --muted-foreground: 220 10% 65%;
+}
+
