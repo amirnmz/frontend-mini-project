@@ -6,7 +6,9 @@ import { PostsArraySchema, type Post } from "@/lib/zod-schemas"
  */
 export async function fetchPosts(): Promise<Post[]> {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      next: { revalidate: 60 }, // Revalidate every 60 seconds
+    })
 
     if (!response.ok) {
       throw new Error("Failed to fetch posts")
